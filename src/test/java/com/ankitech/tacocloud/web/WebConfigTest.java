@@ -1,4 +1,4 @@
-package com.ankitech.tacocloud;
+package com.ankitech.tacocloud.web;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,8 +12,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(HomeController.class)
-class HomeControllerTest {
+@WebMvcTest(WebConfig.class)
+class WebConfigTest {
 
     @Autowired
     private MockMvc mockMvc;

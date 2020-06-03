@@ -16,26 +16,36 @@
     <h3>Deliver my taco masterpieces to...</h3>
     <label for="name">Name: </label>
     <input th:field="*{name}" type="text"/>
+    <span class="validationError" th:errors="*{name}" th:if="${#fields.hasErrors('name')}">Name Error</span>
     <br/>
     <label for="street">Street address: </label>
     <input th:field="*{street}" type="text"/>
+    <span class="validationError" th:errors="*{street}" th:if="${#fields.hasErrors('street')}">street Error</span>
     <br/>
     <label for="city">City: </label>
     <input th:field="*{city}" type="text"/>
+    <span class="validationError" th:errors="*{city}" th:if="${#fields.hasErrors('city')}">city Error</span>
     <br/>
     <label for="state">State: </label>
     <input th:field="*{state}" type="text"/>
-    <br/> <label for="zip">Zip code: </label>
+    <span class="validationError" th:errors="*{state}" th:if="${#fields.hasErrors('state')}">state Error</span>
+    <br/>
+    <label for="zip">Zip code: </label>
     <input th:field="*{zip}" type="text"/>
+    <span class="validationError" th:errors="*{zip}" th:if="${#fields.hasErrors('zip')}">zip Error</span>
     <br/>
     <h3>Here's how I'll pay...</h3>
     <label for="ccNumber">Credit Card #: </label>
     <input th:field="*{ccNumber}" type="text"/>
+    <span class="validationError" th:errors="*{ccNumber}" th:if="${#fields.hasErrors('ccNumber')}">CC Num Error</span>
     <br/>
     <label for="ccExpiration">Expiration: </label>
     <input th:field="*{ccExpiration}" type="text"/>
-    <br/> <label for="ccCVV">CVV: </label>
+    <span class="validationError" th:errors="*{ccExpiration}" th:if="${#fields.hasErrors('ccExpiration')}">ccExpiration Error</span>
+    <br/>
+    <label for="ccCVV">CVV: </label>
     <input th:field="*{ccCVV}" type="text"/>
+    <span class="validationError" th:errors="*{ccCVV}" th:if="${#fields.hasErrors('ccCVV')}">ccCVV Error</span>
     <br/>
     <input type="submit" value="Submit order"/>
 </form>
